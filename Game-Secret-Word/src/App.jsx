@@ -10,7 +10,7 @@ import GameScreen from './components/GameScreen'
 import EndScreen from './components/EndScreen'
 
 
-function App() {
+function App(wordList) {
   
   const [stages, setStages] = useState ([
     {id:1, name: "start"},
@@ -21,13 +21,50 @@ function App() {
 
   const [words] = useState(wordsList)
 
-  console.log(words)
+  const [pickedWord, setPickedWord] = useState("")
+  const [pickedCategory, setPickedCategory] = useState("")
+  const [letters, setLetters] = useState([])
+
+  const pickWordAndCategory = () =>{
+    const categories = Object.keys(words)
+    const category = categories[Math.floor(Math.random() * Object.keys(categories).length)]
+    // pick a random word
+    const word = words[category][Math.floor(Math.random() * words[category].length)]
+
+    return {word, category}
+  }
+
+  // starts the secret word game
+  const startGame = () => {
+    // pick word and pick category
+    const {word, category} = pickWordAndCategory()
+    // create an array of letters
+    let wordLetters = word.split("")
+    wordLetters = wordLetters.map((l) => l.toLowerCase())
+    //fill states
+    setPickedWord(word)
+    setPickedCategory(category)
+    setLetters(letters)
+    
+    setGameStage(stages[1].name)
+  }
+
+  // process the letter input
+  const verifyLetter = () =>{
+    setGameStage(stages[2].name)
+  }
+
+  // restarts the game
+  const retry = () =>{
+    setGameStage(stages[0].name)
+  }
+
 
   return (
       <div className='App'>
-        {gameStage === "start" && <StartScreen/>}
-        {gameStage === "game" && <GameScreen/>}
-        {gameStage === "end" && <EndScreen/>}
+        {gameStage === "start" && <StartScreen startGame={startGame}/>}
+        {gameStage === "game" && <GameScreen verifyLetter={verifyLetter}/>}
+        {gameStage === "end" && <EndScreen retry={retry}/>}
       </div>
   )
 }

@@ -1,8 +1,11 @@
 import './EndScreen.css'
 
-const EndScreen = () => {
+const EndScreen = ({ retry }) => {
   return (
-    <div>EndScreen</div>
+    <div>
+      <h1>Final</h1>
+      <button onClick={retry}>Volta ae</button>
+    </div>
   )
 }
 
