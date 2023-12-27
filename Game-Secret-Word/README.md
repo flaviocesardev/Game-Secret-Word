@@ -1,6 +1,0 @@
-# Game-Secret-word
-
-
-
-
-
