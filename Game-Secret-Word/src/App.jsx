@@ -1,13 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+// CSS
 import './App.css'
+// React
+import { useCallback, useEffect, useState } from 'react'
+// data
+import {wordsList} from './data/words'
+// components
+import StartScreen from './components/StartScreen'
+import GameScreen from './components/GameScreen'
+import EndScreen from './components/EndScreen'
+
 
 function App() {
+  
+  const [stages, setStages] = useState ([
+    {id:1, name: "start"},
+    {id:2, name: "game"},
+    {id:3, name: "end"},
+  ])
+  const [gameStage, setGameStage] = useState(stages[0].name)
+
+  const [words] = useState(wordsList)
+
+  console.log(words)
 
   return (
       <div className='App'>
-        <h1 className='h1_title'>Secret Word</h1>
+        {gameStage === "start" && <StartScreen/>}
+        {gameStage === "game" && <GameScreen/>}
+        {gameStage === "end" && <EndScreen/>}
       </div>
   )
 }

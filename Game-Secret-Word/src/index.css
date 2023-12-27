@@ -10,3 +10,21 @@ body {
   background: linear-gradient(to bottom, #14293d, black);
   color: white;
 }
+
+button {
+  background-color: #14293d;
+  color: white;
+  padding: 0 45px;
+  border: 2px solid white;
+  border-radius: 25px;
+  height: 50px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: .4s;
+}
+
+button:hover{
+  background-color: #35495b;
+} 
