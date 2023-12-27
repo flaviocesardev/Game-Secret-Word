@@ -6,7 +6,7 @@
   font-weight: bold;
 }
 
-.tip span {
+.tip span, .score {
   color: rgb(223, 223, 89);
 }
 
@@ -15,10 +15,11 @@
   padding: 1.5em;
   border: 20px solid rgb(223, 223, 89);
   display: flex;
+  border-radius: 50px;
 }
 
 .letter,
-blankSquare {
+.blankSquare {
   font-size: 70px;
   line-height: 1.5;
   border: 3px solid black;
@@ -28,16 +29,18 @@ blankSquare {
   background-color: white;
   color: black;
   font-weight: bold;
+  border-radius: 8px;
 }
 
 .letterContainer p {
   margin-bottom: 1.2em;
+  
 }
 
 .letterContainer form {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center;   
 }
 .letterContainer input {
   height: 50px;
@@ -45,7 +48,10 @@ blankSquare {
   font-size: 2em;
   text-align: center;
   margin-right: 1em;
+  border-radius: 10px;
+  border: none;
 }
-.wrongLettersContainer span{
-    color: rgb(223, 223, 89);
+.wrongLettersContainer span,
+.pAttempts {
+  color: rgb(223, 223, 89);
 }
