@@ -7,7 +7,7 @@ function App() {
 
   return (
       <div className='App'>
-        <h1>Secret Word</h1>
+        <h1 className='h1_title'>Secret Word</h1>
       </div>
   )
 }
