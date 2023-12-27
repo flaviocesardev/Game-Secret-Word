@@ -19,8 +19,7 @@ function App() {
   const [stages, setStages] = useState ([
     {id:1, name: "start"},
     {id:2, name: "game"},
-    {id:3, name: "end"},
-    {id:4, name: "about"}
+    {id:3, name: "end"}
   ])
   const [gameStage, setGameStage] = useState(stages[0].name)
   const [words] = useState(wordsList)
