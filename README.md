@@ -32,9 +32,10 @@ Certifique-se de ter o Node.js e o npm instalados em sua máquina.
 3. Inicie o jogo
    ```bash
    npm run dev
-4. Abra o navegador e coloque o localHost informado logo após o comando acima, por exemplo:
+4. Abra o navegador e coloque o localHost informado, exemplos de localhost abaixo:
    ```bash
    http://localhost:5173/
+   
    http://localhost:3000/
 
 # Contato
