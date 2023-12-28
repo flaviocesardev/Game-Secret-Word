@@ -35,6 +35,7 @@ Certifique-se de ter o Node.js e o npm instalados em sua máquina.
 4. Abra o navegador e coloque o localHost informado logo após o comando acima, por exemplo:
    ```bash
    http://localhost:5173/
+   http://localhost:3000/
 
 # Contato
 
