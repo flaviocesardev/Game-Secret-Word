@@ -22,7 +22,7 @@ const GameScreen = ({ verifyLetter, pickedWord, pickedCategory, letters, guessed
       <p className="points">
         <span>Pontuação: <span className='score'>{score}</span></span>
       </p>
-      <h1>Advinhe a palavra:</h1>
+      <h1>Adivinhe a palavra:</h1>
       <h3 className="tip">
         Dica sobre a palavra: <span>{pickedCategory}</span>
       </h3>
